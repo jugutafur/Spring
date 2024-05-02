@@ -25,9 +25,6 @@ public class Compra {
     private String comentario;
     private String estado;
 
-
-    /* relacions */
-
     @ManyToOne
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Cliente cliente;
