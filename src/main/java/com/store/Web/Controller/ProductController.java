@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = ResourceEndpoint.PRODUCT)
+@RequestMapping(value = ResourceEndpoint.PATH_PRODUCT)
 public class ProductController {
 
     @Autowired
@@ -25,7 +25,7 @@ public class ProductController {
 
     @GetMapping(value = ResourceEndpoint.HEALTH)
     public String health (){
-        return String.format("up Collection = %s", ResourceEndpoint.PRODUCT);
+        return String.format("up Collection = %s", ResourceEndpoint.PATH_PRODUCT);
     }
 
     @GetMapping(value = ResourceEndpoint.GET_ALL, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -49,7 +49,7 @@ public class ProductController {
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));            //En caso de no encontrar niingun producto
     }
 
-    @GetMapping(value = ResourceEndpoint.CATEGORY, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = ResourceEndpoint.PATH_CATEGORY, produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation("Of category Select item")
     public ResponseEntity<List<Product>> getByCategory (
             @RequestParam(value = Constants.CATEGORY_ID) int categoryId){

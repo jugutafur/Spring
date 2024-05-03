@@ -10,8 +10,8 @@ public class ResourceEndpoint {
     public static final String DELETE = "/delete";
 
     //Product
-    public static final String PRODUCT = "/products";
-    public static final String CATEGORY = "/category";
+    public static final String PATH_PRODUCT = "/products";
+    public static final String PATH_CATEGORY = "/category";
 
     //purchase
     public static final String PURCHASE = "/purchase";
