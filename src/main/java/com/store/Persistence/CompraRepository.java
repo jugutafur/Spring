@@ -7,10 +7,8 @@ import com.store.Persistence.Entity.Compra;
 import com.store.Persistence.mapper.PurchaseMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 import java.util.Optional;
-
 
 @Repository
 public class CompraRepository implements PurchaseRepository {
@@ -23,7 +21,6 @@ public class CompraRepository implements PurchaseRepository {
 
     @Override
     public List<Purchase> getAll() {
-
         return mapper.toPurchases((List<Compra>) compraCrudRepository.findAll());
     }
 
@@ -37,7 +34,6 @@ public class CompraRepository implements PurchaseRepository {
     public Purchase save(Purchase purchase) {
         Compra compra = mapper.toCompra(purchase);
         compra.getProductos().forEach(producto -> producto.setCompra(compra));
-
         return mapper.toPurchase(compraCrudRepository.save(compra));
     }
 }

@@ -1,4 +1,4 @@
-package com.store.Web.Config;
+package com.store.Config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,6 +11,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
+    //file readme (1)
     @Bean
     public Docket api(){
         return new Docket (DocumentationType.SWAGGER_2)

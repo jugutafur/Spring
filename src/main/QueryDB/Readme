@@ -1,3 +1,4 @@
+(1)
 in the file Web > config > SwaggerConfig, contain the Bean that work Swagger
 you can use the next options by see documentation controllers
 
@@ -6,6 +7,7 @@ you can use the next options by see documentation controllers
 //Url = http://localhost:8092/casa/api/swagger-ui.html
 
 *******************************************************************************************
+(2)
 to to run jar you need, create the jar
 Gradle > build > bootJar
 
@@ -20,8 +22,6 @@ additional properties
 * -Dspring.profiles.active=pdn      //Indicated profile by to run app.
 * -Dserver.port=88                  //Indicated port to run app.
 
-
-
-
-
-
+*******************************************************************************************
+(3)
+jdbc:postgresql://<host>:<port>/<dbname>?user=<username>&password=<password>
