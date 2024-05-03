@@ -1,0 +1,27 @@
+in the file Web > config > SwaggerConfig, contain the Bean that work Swagger
+you can use the next options by see documentation controllers
+
+//Url = {host}:{puerto}/{contexto}/swagger-ui/index.html
+//Url = {host}:{puerto}/{contexto}/swagger-ui.html
+//Url = http://localhost:8092/casa/api/swagger-ui.html
+
+*******************************************************************************************
+to to run jar you need, create the jar
+Gradle > build > bootJar
+
+create .jar in the file build > libs > store-2.0.jar
+
+java -jar nameProject-version.jar
+java -jar store-2.0.jar
+
+additional properties
+
+* -Xmx2048m                         //Asigned memory by to run app.
+* -Dspring.profiles.active=pdn      //Indicated profile by to run app.
+* -Dserver.port=88                  //Indicated port to run app.
+
+
+
+
+
+

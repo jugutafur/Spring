@@ -1,0 +1,519 @@
+{
+  "info": {
+    "_postman_id": "bd98abef-c2cc-4287-b32e-3e743f930532",
+    "name": "platzi-store Local",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "15599908"
+  },
+  "item": [
+    {
+      "name": "Product",
+      "item": [
+        {
+          "name": "health",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "726a9095-90d4-4b41-a506-6eef8733d3e0",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "user",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"description\": \"esta es la nueva des\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8092/casa/api/products/health",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8092",
+              "path": [
+                "casa",
+                "api",
+                "products",
+                "health"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "All products",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "197fb97a-4171-467b-88ef-f79d4c0a6d2a",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "user",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8092/casa/api/products/all",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8092",
+              "path": [
+                "casa",
+                "api",
+                "products",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "products by Id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "1087bcff-32a1-46eb-aeaa-8c2a4e4fc5ba",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "user",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8092/casa/api/products?id=3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8092",
+              "path": [
+                "casa",
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "3"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "category by categoryId",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "cf08e15c-560e-42d5-8d98-70f29b5e5fa0",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "user",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8092/casa/api/products/category?categoryId=6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8092",
+              "path": [
+                "casa",
+                "api",
+                "products",
+                "category"
+              ],
+              "query": [
+                {
+                  "key": "categoryId",
+                  "value": "6"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "save product",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "3fec901e-550e-44e1-ac2e-04aa54ebeb21",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "user",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productId\": 1,\r\n    \"name\": \"Guayaba Feijoa\",\r\n    \"categoryId\": 1,\r\n    \"price\": 300.0,\r\n    \"stock\": 500,\r\n    \"active\": true,\r\n    \"category\": {\r\n        \"categoryId\": 1,\r\n        \"category\": \"Frutas y verduras\",\r\n        \"active\": true\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8092/casa/api/product/Save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8092",
+              "path": [
+                "casa",
+                "api",
+                "product",
+                "Save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete product",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "01d64d3c-0dc2-4686-bb01-5b0f50e34eb3",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "user",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8092/casa/api/products/delete?id=2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8092",
+              "path": [
+                "casa",
+                "api",
+                "products",
+                "delete"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Purchase",
+      "item": [
+        {
+          "name": "health",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "726a9095-90d4-4b41-a506-6eef8733d3e0",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "user",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"description\": \"esta es la nueva des\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8092/casa/api/purchase/health",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8092",
+              "path": [
+                "casa",
+                "api",
+                "purchase",
+                "health"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "All purchase",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "726a9095-90d4-4b41-a506-6eef8733d3e0",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "user",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"description\": \"esta es la nueva des\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8092/casa/api/purchase/all",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8092",
+              "path": [
+                "casa",
+                "api",
+                "purchase",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "cliente by clienteId",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "c1a364be-ee92-44d8-8893-e6bf0f7b8c38",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "user",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"description\": \"esta es la nueva des\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8092/casa/api/purchase/cliente/4546221",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8092",
+              "path": [
+                "casa",
+                "api",
+                "purchase",
+                "cliente",
+                "4546221"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Save Purchase*",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "3fec901e-550e-44e1-ac2e-04aa54ebeb21",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "user",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"description\": \"esta es la nueva des\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8092/casa/api/purchase/Save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8092",
+              "path": [
+                "casa",
+                "api",
+                "purchase",
+                "Save"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

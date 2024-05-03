@@ -44,9 +44,9 @@ public class ProductController {
     public ResponseEntity<Product> getProduct(
             @ApiParam(value = "Insert id of product", required = true, example = "7")
             @RequestParam(value = Constants.PRODUCT_ID) int productId){
-        return productService.getProduct(productId)
+        return productService.getProduct(productId)                             //Este devuelve un Opcional
                 .map(product -> new ResponseEntity<>(product, HttpStatus.OK))
-                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));            //En caso de no encontrar niingun producto
     }
 
     @GetMapping(value = ResourceEndpoint.CATEGORY, produces = MediaType.APPLICATION_JSON_VALUE)
