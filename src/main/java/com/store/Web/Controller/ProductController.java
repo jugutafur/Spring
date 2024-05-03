@@ -66,7 +66,7 @@ public class ProductController {
     }
 
     @DeleteMapping(value = ResourceEndpoint.DELETE)
-    @ApiOperation("Delete Specific Product ")
+    @ApiOperation("Delete Specific Product")
     public ResponseEntity delete(
             @RequestParam(value = Constants.PRODUCT_ID) int productId){
         if(productService.delete(productId)){

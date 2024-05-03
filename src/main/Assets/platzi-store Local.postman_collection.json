@@ -69,7 +69,7 @@
               "basic": [
                 {
                   "key": "password",
-                  "value": "197fb97a-4171-467b-88ef-f79d4c0a6d2a",
+                  "value": "95d679e5-3311-470e-94f1-6847d948a679",
                   "type": "string"
                 },
                 {
@@ -109,9 +109,6 @@
         },
         {
           "name": "products by Id",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "auth": {
               "type": "basic",
@@ -130,17 +127,8 @@
             },
             "method": "GET",
             "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
             "url": {
-              "raw": "http://localhost:8092/casa/api/products?id=3",
+              "raw": "http://localhost:8092/casa/api/products?productId=14",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -153,8 +141,8 @@
               ],
               "query": [
                 {
-                  "key": "id",
-                  "value": "3"
+                  "key": "productId",
+                  "value": "14"
                 }
               ]
             }
@@ -219,26 +207,11 @@
         {
           "name": "save product",
           "request": {
-            "auth": {
-              "type": "basic",
-              "basic": [
-                {
-                  "key": "password",
-                  "value": "3fec901e-550e-44e1-ac2e-04aa54ebeb21",
-                  "type": "string"
-                },
-                {
-                  "key": "username",
-                  "value": "user",
-                  "type": "string"
-                }
-              ]
-            },
             "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"productId\": 1,\r\n    \"name\": \"Guayaba Feijoa\",\r\n    \"categoryId\": 1,\r\n    \"price\": 300.0,\r\n    \"stock\": 500,\r\n    \"active\": true,\r\n    \"category\": {\r\n        \"categoryId\": 1,\r\n        \"category\": \"Frutas y verduras\",\r\n        \"active\": true\r\n    }\r\n}",
+              "raw": "{\r\n    \"name\": \"computador\",\r\n    \"categoryId\": 1,\r\n    \"price\": 300.0,\r\n    \"stock\": 500,\r\n    \"active\": true\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -246,7 +219,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8092/casa/api/product/Save",
+              "raw": "http://localhost:8092/casa/api/products/save",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -255,8 +228,8 @@
               "path": [
                 "casa",
                 "api",
-                "product",
-                "Save"
+                "products",
+                "save"
               ]
             }
           },
@@ -265,21 +238,6 @@
         {
           "name": "Delete product",
           "request": {
-            "auth": {
-              "type": "basic",
-              "basic": [
-                {
-                  "key": "password",
-                  "value": "01d64d3c-0dc2-4686-bb01-5b0f50e34eb3",
-                  "type": "string"
-                },
-                {
-                  "key": "username",
-                  "value": "user",
-                  "type": "string"
-                }
-              ]
-            },
             "method": "DELETE",
             "header": [],
             "body": {
@@ -292,7 +250,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8092/casa/api/products/delete?id=2",
+              "raw": "http://localhost:8092/casa/api/products/delete?productId=4",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -306,8 +264,8 @@
               ],
               "query": [
                 {
-                  "key": "id",
-                  "value": "2"
+                  "key": "productId",
+                  "value": "4"
                 }
               ]
             }
@@ -374,21 +332,6 @@
             "disableBodyPruning": true
           },
           "request": {
-            "auth": {
-              "type": "basic",
-              "basic": [
-                {
-                  "key": "password",
-                  "value": "726a9095-90d4-4b41-a506-6eef8733d3e0",
-                  "type": "string"
-                },
-                {
-                  "key": "username",
-                  "value": "user",
-                  "type": "string"
-                }
-              ]
-            },
             "method": "GET",
             "header": [],
             "body": {
@@ -428,7 +371,7 @@
               "basic": [
                 {
                   "key": "password",
-                  "value": "c1a364be-ee92-44d8-8893-e6bf0f7b8c38",
+                  "value": "197fb97a-4171-467b-88ef-f79d4c0a6d2a",
                   "type": "string"
                 },
                 {
@@ -450,7 +393,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8092/casa/api/purchase/cliente/4546221",
+              "raw": "http://localhost:8092/casa/api/purchase/cliente?id=4546221",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -460,8 +403,13 @@
                 "casa",
                 "api",
                 "purchase",
-                "cliente",
-                "4546221"
+                "cliente"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "4546221"
+                }
               ]
             }
           },
@@ -497,7 +445,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8092/casa/api/purchase/Save",
+              "raw": "http://localhost:8092/casa/api/purchase/save",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -507,7 +455,7 @@
                 "casa",
                 "api",
                 "purchase",
-                "Save"
+                "save"
               ]
             }
           },
